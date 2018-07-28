@@ -1,5 +1,5 @@
 <div class="row" id="calculator">
-  <input type="text" class="col-12" name="primary-input" id="primary-input" readonly value="{{currentNumber}}">
+  <input type="text" class="col-12" name="primary-input" id="primary-input" readonly value="{{tmpOutputString}}">
 </div>
 
 <section id="touch-pad">
@@ -31,8 +31,8 @@
   </div>
 
   <div class="row">
-    <button class="col btn btn-danger" (click)="equals($event)">=</button>
-    <button class="col btn btn-warning">C</button>
+    <button class="col btn btn-danger" (click)="equals($event, '=')">=</button>
+    <button class="col btn btn-warning" (click)="clear($event)">C</button>
   </div>
 
 </section>
