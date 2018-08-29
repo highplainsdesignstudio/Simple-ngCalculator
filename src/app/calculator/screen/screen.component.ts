@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-screen',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./screen.component.css']
 })
 export class ScreenComponent implements OnInit {
+
+  @Input() display;
 
   constructor() { }
 
