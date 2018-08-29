@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-number-button',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./number-button.component.css']
 })
 export class NumberButtonComponent implements OnInit {
+
+  @Input() calcNumber;
 
   constructor() { }
 
