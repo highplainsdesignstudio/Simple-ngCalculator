@@ -11,7 +11,8 @@
       </ng-container>
       <app-function-button 
         class="col-4"
-        [calcFunction]="functions[0]">
+        [calcFunction]="functions[0]"
+        (clickEvent)="onFunctionClick($event)">
       </app-function-button>
     </div>
   </div>
@@ -22,7 +23,8 @@
         <app-function-button
           *ngIf="j !== 0" 
           [calcFunction]="y"
-          class="col-6">
+          class="col-6"
+          (clickEvent)="onFunctionClick($event)">
         </app-function-button>
       </ng-container>
     </div>

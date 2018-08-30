@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-function-button',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FunctionButtonComponent implements OnInit {
 
   @Input() calcFunction;
+  @Output() clickEvent = new EventEmitter();
 
   constructor() { }
 
@@ -16,6 +17,7 @@ export class FunctionButtonComponent implements OnInit {
 
   onClick() {
     // console.log("in onClick for function-button");
+    this.clickEvent.emit(this.calcFunction);
   }
 
 }
