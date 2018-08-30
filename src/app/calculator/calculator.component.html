@@ -2,4 +2,6 @@
   <app-screen [display]="display"></app-screen>
 </div>
 
-<app-buttons></app-buttons>
+<app-buttons
+  (changeEvent)="onButtonsChange($event)">
+</app-buttons>

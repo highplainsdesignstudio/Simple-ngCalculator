@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -7,15 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
+  @Output() changeEvent = new EventEmitter();
+
   numbers: number[] = [1,2,3,4,5,6,7,8,9,0];
   functions: string[] = ['.','*','/','+','-','C','='];
-
   display = "";
 
   constructor() { }
 
   ngOnInit() {
   }
+
+ 
 
   onFunctionClick(funct) {
     if(funct === ".") {
@@ -28,12 +31,12 @@ export class ButtonsComponent implements OnInit {
     } else {
       this.display = this.display + " " + funct + " ";
     }
-    console.log(this.display);
+    this.changeEvent.emit(this.display);
   }
 
   onNumberClick(num) {
     this.display += num.toString();
-    console.log(this.display);
+    this.changeEvent.emit(this.display);
   }
 
 }

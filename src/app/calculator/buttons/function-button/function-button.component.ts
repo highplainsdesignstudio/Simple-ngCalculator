@@ -16,7 +16,6 @@ export class FunctionButtonComponent implements OnInit {
   }
 
   onClick() {
-    // console.log("in onClick for function-button");
     this.clickEvent.emit(this.calcFunction);
   }
 

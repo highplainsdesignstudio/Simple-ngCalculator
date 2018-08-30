@@ -14,4 +14,8 @@ export class CalculatorComponent implements OnInit {
   ngOnInit() {
   }
 
+  onButtonsChange(y) {
+    this.display = y;
+  }
+
 }
