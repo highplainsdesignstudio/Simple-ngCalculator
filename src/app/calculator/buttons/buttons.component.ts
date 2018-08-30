@@ -15,4 +15,8 @@ export class ButtonsComponent implements OnInit {
   ngOnInit() {
   }
 
+  onNumberClick(num) {
+    console.log(num.toString());
+  }
+
 }

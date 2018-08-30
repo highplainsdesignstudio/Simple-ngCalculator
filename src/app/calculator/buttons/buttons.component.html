@@ -5,7 +5,8 @@
         <app-number-button
           [class.col-4]="x !== 0"
           [class.col-8]="x === 0"
-          [calcNumber]="x">
+          [calcNumber]="x"
+          (clickEvent)="onNumberClick($event)">
         </app-number-button>
       </ng-container>
       <app-function-button 
@@ -25,10 +26,6 @@
         </app-function-button>
       </ng-container>
     </div>
-    
-    
   </div>
-  
-  
 </div>
 

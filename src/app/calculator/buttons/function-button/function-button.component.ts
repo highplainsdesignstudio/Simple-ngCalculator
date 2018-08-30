@@ -14,4 +14,8 @@ export class FunctionButtonComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick() {
+    // console.log("in onClick for function-button");
+  }
+
 }
