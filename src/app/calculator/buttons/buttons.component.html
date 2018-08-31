@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-8">
+  <div class="col-8" id="numbers-keys">
     <div class="row">
       <ng-container *ngFor="let x of numbers; index as i">
         <app-number-button
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="col-4">
+  <div class="col-4" id="function-keys">
     <div class="row">
       <ng-container *ngFor="let y of functions; index as j">
         <app-function-button
@@ -30,4 +30,3 @@
     </div>
   </div>
 </div>
-
