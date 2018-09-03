@@ -1,5 +1,8 @@
 #calc-screen {
-    /* border: 1px solid dimgray; */
     padding-bottom: 30px;
     padding-top: 20px;
+}
+
+input {
+    text-align: right;
 }
